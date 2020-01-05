@@ -129,6 +129,9 @@ section:last-child {
 	float: right;
 	width: 90%;
 }
+.sectionContent progress {
+	width: 50px;
+}
 
 .sectionTitle h1 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
