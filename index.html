@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@qq.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2021-04-27 09:31:11
+ * @LastEditTime: 2022-02-13 21:39:04
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -24,17 +24,17 @@
 <body id="top">
     <div id="cv" class="instaFade">
         <div class="mainDetails">
-            <div id="headshot" class="quickFade">
+            <!-- <div id="headshot" class="quickFade">
                 <img src="info.jpg" alt="erythron" />
-                <p style="font-size:10px;">↑ 网页链接 ↑</p>
-            </div>
+                <p style="font-size:10px;">↑ 网页地址 ↑</p>
+            </div> -->
 
             <div id="name">
                 <h1 class="quickFade delayTwo">郑卓文</h1>
-                <h4 class="quickFade delayThree">求职意向:容器, 系统运维</h2>
-                    <h4 class="quickFade delayThree">状态: 在职</h2>
-                        <h4 class="quickFade delayThree">工作经验: 2年</h2>
-                            <h4 class="quickFade delayThree">到岗时间: 2-3周</h2>
+                <h4 class="quickFade delayThree">求职意向:容器, 系统运维</h4>
+                <h4 class="quickFade delayThree">状态: 在职</h4>
+                <h4 class="quickFade delayThree">工作经验: 3年</h4>
+                <h4 class="quickFade delayThree">到岗时间: 2-3周</h4>
             </div>
 
             <div id="contactDetails" class="quickFade delayFour">
@@ -42,8 +42,8 @@
                     <li>学校: 广州大学华软软件学院</li>
                     <li>学历: 统招本科(2019届)</li>
                     <li>专业: 网络技术系</li>
-                    <li>邮箱: erythron@qq.com</li>
-                    <li>手机: 13124960367</li>
+                    <li>邮箱: erythron@outlook.com</li>
+                    <li>手机: 17199922057</li>
                     <li>微信: 1773990085</li>
                 </ul>
             </div>
@@ -53,43 +53,40 @@
         <div id="mainArea" class="quickFade delayFive">
             <section>
                 <div class="sectionTitle">
+                    <h1>证书</h1>
                     <h1>技能</h1>
-                    <h1>掌握</h1>
                 </div>
 
                 <div id="skill" class="sectionContent">
                     <ul style="list-style: none">
+                        <li>
+                            <progress value="100" max="100"></progress>
+                            <strong>证书: CKA(K8s管理员);  CET4</strong>
+                        </li>
+                        <li>
+                            <progress value="80" max="100"></progress>
+                            熟悉Docker容器, K8s容器编排技术
+                        </li>
                         <li><progress value="80" max="100"></progress>
-                            熟悉Shell; 熟悉Python, 了解其Django框架, 有一定的开发经验</li>
+                            熟悉Python, 了解其Django框架.</li>
                         <li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉CentOS, Debian, Ubuntu等Linux操作系统</li>
-                        <li>
-                            <progress value="75" max="100"></progress>
-                            熟悉Docker容器, Kubernetes容器编排技术.
-                        </li>
-                        <!-- <li><progress value="65" max="100"></progress>
-						了解分布式存储Ceph的原理及其配置维护
-					    </li> -->
+                            熟悉CentOS, Ubuntu, Debian操作系统.</li>
                         <li>
                             <progress value="70" max="100"></progress>
+                            熟悉Ansible, Git, Jenkins等工具的使用.
+                        </li>
+                        <li>
+                            <progress value="70" max="100"></progress>
+                            熟悉ES的部署配置, 以及使用logstash进行日志过滤.
+                        </li>
+                        <li>
+                            <progress value="65" max="100"></progress>
+                            了解Prometheus, Grafana监控的配置以及使用.
+                        </li>
+                        <li>
+                            <progress value="60" max="100"></progress>
                             了解数据库原理, 具备对MySQL, Redis配置与维护能力.
-                        </li>
-                        <li>
-                            <progress value="70" max="100"></progress>
-                            熟悉Ansible, Git, Jenkins等自动化工具的使用.
-                        </li>
-                        <li>
-                            <progress value="70" max="100"></progress>
-                            了解Prometheus, Grafana等监控可示化工具对微服务的配置以及使用.
-                        </li>
-                        <li>
-                            <progress value="65" max="100"></progress>
-                            了解Nginx, HAproxy, KeepAlived等中间件的部署, 配置.
-                        </li>
-                        <li>
-                            <progress value="65" max="100"></progress>
-                            有公有云使用经验, 如阿里, 腾讯云等
                         </li>
                         <li>&nbsp;</li>
                     </ul>
@@ -98,37 +95,68 @@
             </section>
             <section>
                 <div class="sectionTitle">
+                    <h1>工作</h1>
                     <h1>经历</h1>
                 </div>
 
                 <div class="sectionContent">
                     <article>
-                        <h2>卓望数码(移动子公司); 运维工程师(校招); 2018.12 - 2021.03</h2>
-                        <!-- <p class="subDetails">2018.12 - ? </p> -->
-                        <p>参与了广东移动-融合云, 集运-权益平台等几个项目的维护</p>
+                        <h2>2021.03 - ?    广东亿迅科技 - 云平台运维 </h2>
+                        <p>
+                            1. 公司各资源池自研K8s故障处理. <br>
+                            2. 新资源池上线服务器初始化, 各应用组件的安装部署. <br>
+                            3. 其它: ES集群维护; 组件安全基线整改; 参与组件容器化部署; 维护项目文档等.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>2018.12 - 2021.03    卓望数码技术 - 系统运维 </h2>
+                        <p>
+                            1. 保障权益平台(Docker)&权益超市(K8s)两套系统的稳定运行, 处理异常业务. <br>
+                            2. 业务Dockerfile文件的编写, CI/CD上线部署等. <br>
+                            3. 其它: 编写脚本, 自动化常用的工作流程; 配合研发SQL执行; 监控系统, 日志仓库维护; 业务日报编写等.
+                        </p>
                     </article>
 
-                    <article>
+
+                    <!-- <article>
                         <h2>广州银行信用卡中心; 信息安全实习生; 2018.09 - 2018.12</h2>
                         <p>
                             协助信息安全专员对内部web系统进行渗透测试,对系统的上线,迭代进行审核;
                             使用各信息安全工具,分析监控日志,进行日常维护.
                         </p>
-                    </article>
+                    </article> -->
                 </div>
                 <div class="clear"></div>
             </section>
             <section>
                 <div class="sectionTitle">
                     <h1>项目</h1>
-                    <h1>内容</h1>
+                    <h1>经历</h1>
                 </div>
 
                 <div class="sectionContent">
                     <article>
+                        <h2>storm容器化部署</h2>
+                        <p>
+                            &emsp;&emsp;分配到需求: 使用Helm对storm容器化, 并对接到自研K8s, 用于批量部署. 因官方chart仓库中已存在strom包, 在此基础上做二次修改. <br>
+                            &emsp;&emsp;难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数. 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h2>定时上报业务监控自动化脚本</h2>
+                        <p>
+                            &emsp;&emsp;因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 监控信息从Grafana中获取; 通过Python库Selenium操作Chrome浏览器获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. <a
+                            href="https://gitee.com/erythron/ops-script/blob/master/grafana_monitor_report_by_selenium.py"
+                            target="_BLANK">代码链接</a><br>
+
+                            &emsp;&emsp;难点: Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在grafana中配置header, 反向代理插入header, 通过安全认证, 拿到数据.
+                        </p>
+                    </article>
+
+                    <!-- <article>
                         <h2>
-                            <a href="https://dev.coc.10086.cn/coc3/market-web/coc3-market-web/#/home" target='_BLANK'>
-                                权益平台&权益超市</a>, 时间: 2019.12 - 2021.03
+                            权益平台&权益超市, 时间: 2019.12 - 2021.03
                         </h2>
                         <p>
                             权益平台&权益超市为移动的权益投放平台和消费商城; <br>
@@ -163,7 +191,7 @@
                             1. 参与数量1千以上的物理服务器集群的日常维护, 保障服务器集群的稳定运作.<br>
                             2. 保障VSphere平台的稳定使用, 及时响应客户报障, 保证VPS的可用性.<br>
                         </p>
-                    </article>
+                    </article> -->
                 </div>
                 <div class="clear"></div>
             </section>
@@ -180,14 +208,9 @@
                     <article>
                         <h2> </h2>
                         <p>
-                            缺点: 工作履历不长, 目前实践还不够丰富;<br>
-                            优点: 乐于尝试新事物, 有很好的技术敏感度;<br>
-                            具有很强的解决能力, 遇到问题能通过google或官方文档去学习, 解决; <br>
-                            目前也在不断提高自己的技术与工作能力. <br>
-                            <br>
+                            乐于尝试新事物, 遇到问题能通过google或官方文档去学习, 解决;<br>
+                            不断提高自己的技术与工作能力中. <br>
                         </p>
-                        <!-- <h2>如需<a href="https://gitee.com/erythron/pdf_resume/raw/master/resume.pdf"">PDF版</a>麻烦点击下载另存; 感谢您的浏览. </h2> -->
-                        <p>END, 感谢您查看我的网页简历. </p>
                     </article>
                 </div>
                 <div class=" clear">
