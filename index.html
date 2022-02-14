@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@qq.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-02-13 21:39:04
+ * @LastEditTime: 2022-02-14 21:10:18
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -136,17 +136,22 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>storm容器化部署</h2>
+                        <h2>storm容器化部署 - 亿迅</h2>
                         <p>
-                            &emsp;&emsp;分配到需求: 使用Helm对storm容器化, 并对接到自研K8s, 用于批量部署. 因官方chart仓库中已存在strom包, 在此基础上做二次修改. <br>
+                            &emsp;&emsp;小组接到需求对部分原生组件容器化, 使用helm批量部署并对接到自研K8s. 个人分配到的组件是storm. 因官方chart仓库中已存在strom包, 在此基础上做二次修改. <br>
                             &emsp;&emsp;难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数. 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
                         </p>
                     </article>
-
                     <article>
-                        <h2>定时上报业务监控自动化脚本</h2>
+                        <h2>ELK日志收集 - 亿迅</h2>
                         <p>
-                            &emsp;&emsp;因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 监控信息从Grafana中获取; 通过Python库Selenium操作Chrome浏览器获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. <a
+                            &emsp;&emsp;因业务需要从日志进行检索关键信息, 按需求部署ELK系统. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做消息缓存. <br>
+                            &emsp;&emsp;个人参与了该项目中全部流程, 负责了部分日志的filebeat收集, logstash过滤规则, kafka topic管理等.</p>
+                    </article>
+                    <article>
+                        <h2>定时上报业务监控自动化脚本 - 卓望</h2>
+                        <p>
+                            &emsp;&emsp;因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 监控信息从Grafana中获取; 通过Python库Selenium操作Chrome浏览器获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 后续改造为自动日报输出 <a
                             href="https://gitee.com/erythron/ops-script/blob/master/grafana_monitor_report_by_selenium.py"
                             target="_BLANK">代码链接</a><br>
 
