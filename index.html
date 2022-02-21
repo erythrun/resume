@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-02-20 21:22:34
+ * @LastEditTime: 2022-02-21 21:27:03
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -111,19 +111,19 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>2021.03 - ?    广东亿迅科技(邮电) - 云平台运维 </h2>
+                        <h2>2021.03 - ?    广东邮电(电信子公司) - 云平台运维 </h2>
                         <p>
-                            1. 公司各资源池自研K8s故障处理. <br>
-                            2. 新资源池上线服务器初始化, 各应用组件的安装部署. <br>
-                            3. 其它: ES集群维护; 组件安全基线整改; Ansible剧本编写; 维护项目文档等.
+                            1. 电信各省份资源池自研K8s故障处理. <br>
+                            2. 新资源池上线服务器的初始化操作, 各应用组件的安装部署. <br>
+                            3. 其它: ES集群维护; 组件安全基线整改; Ansible Playbook编写; 维护项目文档等.
                         </p>
                     </article>
                     <article>
-                        <h2>2018.12 - 2021.03    卓望数码技术 - 系统运维 </h2>
+                        <h2>2018.12 - 2021.03    卓望数码(移动子公司) - 系统运维 </h2>
                         <p>
                             1. 保障权益平台(Docker)&权益超市(K8s)两套系统的稳定运行, 处理异常业务. <br>
-                            2. Dockerfile文件的编写, 业务上线部署等. <br>
-                            3. 其它: 编写脚本, 自动化常用的工作流程; 配合研发SQL执行; 监控系统, 日志仓库维护; 业务日报编写等.<br>
+                            2. Dockerfile文件的编写, CI/CD流程修改, 业务上线部署等. <br>
+                            3. 其它: 编写脚本, 自动化常用的工作流程; 配合研发SQL执行; 监控系统, 业务日志存储维护; 日报编写等.<br>
                             4. 广东移动VMware vSphere平台及ESXI服务器维护.
                         </p>
                     </article>
@@ -132,7 +132,7 @@
                     <article>
                         <h2>2018.09 - 2018.12    广州银行信用卡中心 - 信息安全实习生 </h2>
                         <p>
-                            协助信息安全专员对内部web系统进行渗透测试,对系统的上线,迭代进行审核;
+                            协助信息安全专员对内部web系统进行渗透测试, 对系统的上线,迭代进行审核.
                         </p>
                     </article>
                 </div>
@@ -146,16 +146,16 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>Storm容器化部署 - 亿迅</h2>
+                        <h2>Storm容器化部署 - 邮电</h2>
                         <p>
                             &emsp;&emsp;小组接到需求对部分原生组件容器化, 使用helm批量部署并对接到自研K8s. 个人分配到的组件是Storm. 因官方chart仓库中已存在Storm包, 在此基础上做二次修改. <br>
                             &emsp;&emsp;难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
                         </p>
                     </article>
                     <article>
-                        <h2>ELK日志收集 - 亿迅</h2>
+                        <h2>ELK日志收集 - 邮电</h2>
                         <p>
-                            &emsp;&emsp;因业务需要从日志进行检索关键信息, 按需求部署ELK系统. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做消息缓存. <br>
+                            &emsp;&emsp;接内部业务需求: 部署ELK系统, 从日志进行检索关键信息. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做消息缓存. <br>
                             &emsp;&emsp;个人参与了该项目中全部流程, 负责对部分日志的filebeat收集, 编写logstash过滤规则, kafka topic管理等.</p>
                     </article>
                     <article>
