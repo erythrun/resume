@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-02-21 21:27:03
+ * @LastEditTime: 2022-02-28 20:27:27
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
                     <li>专业: 网络技术系</li>
                     <li>邮箱: erythron@outlook.com</li>
                     <li>手机: 17199922057</li>
-                    <li>QQ||微信: 1773990085</li>
+                    <li>微信|QQ: 1773990085</li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -129,12 +129,12 @@
                     </article>
 
 
-                    <article>
+                    <!-- <article>
                         <h2>2018.09 - 2018.12    广州银行信用卡中心 - 信息安全实习生 </h2>
                         <p>
                             协助信息安全专员对内部web系统进行渗透测试, 对系统的上线,迭代进行审核.
                         </p>
-                    </article>
+                    </article> -->
                 </div>
                 <div class="clear"></div>
             </section>
@@ -155,11 +155,11 @@
                     <article>
                         <h2>ELK日志收集 - 邮电</h2>
                         <p>
-                            &emsp;&emsp;接内部业务需求: 部署ELK系统, 从日志进行检索关键信息. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做消息缓存. <br>
-                            &emsp;&emsp;个人参与了该项目中全部流程, 负责对部分日志的filebeat收集, 编写logstash过滤规则, kafka topic管理等.</p>
+                            &emsp;&emsp;接内部业务需求: 部署ELK系统, 从日志进行检索关键信息. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做缓存. <br>
+                            &emsp;&emsp;个人参与了该项目中全部流程, 负责编写部分日志的filebeat收集, logstash过滤规则. 为降低ES集群压力, 部分业务日志还需要提前聚合统计, 于logstash的aggregate编写Ruby做聚合计算. </p>
                     </article>
                     <article>
-                        <h2>定时上报业务监控自动化脚本 - 卓望</h2>
+                        <h2>业务自动化上报 - 卓望</h2>
                         <p>
                             &emsp;&emsp;因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
                             href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
@@ -168,7 +168,14 @@
                             &emsp;&emsp;难点: 1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
-
+                    <article>
+                        <h2>广东网优项目 - 卓望</h2>
+                        <p>
+                            该项目使用到的技术栈有: K8S, Docker, Ceph等. <br>
+                            在该项目中, 我参与了K8S集群的高可用部署; ETCD数据库的数据备份与恢复; 部署Ceph为后端存储等.
+                            于该项目中, 个人学习Docker, K8S相关原理, 了解其组件构成与运行. <br>
+                        </p>
+                    </article>
                     <!-- <article>
                         <h2>
                             权益平台&权益超市, 时间: 2019.12 - 2021.03
@@ -225,7 +232,7 @@
                         <p>
                             乐于尝试新事物, 遇到问题能通过google或官方文档去学习, 解决;<br>
                             不断提高自己的技术与工作能力中. <br>
-                            如查看网页版简历请访问 <a href="https://erythrun.github.io/resume/">https://erythrun.github.io/resume/</a>
+                            如需查看网页版简历请访问 <a href="https://erythrun.github.io/resume/">https://erythrun.github.io/resume/</a>
                         </p>
                     </article>
                 </div>
