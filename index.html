@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-03-02 22:24:21
+ * @LastEditTime: 2022-03-11 10:07:01
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
                     <li>专业: 网络技术系</li>
                     <li>邮箱: erythron@outlook.com</li>
                     <li>手机: 17199922057</li>
-                    <li>微信|QQ: 1773990085</li>
+                    <li>微信: 1773990085</li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -77,18 +77,18 @@
                             熟悉Python, 了解其Django框架(曾独立完成了一个demo bbs, <a href="https://github.com/erythrun/demo-warthunder-bbs">仓库链接</a>)</li>
                         <li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉CentOS, Ubuntu, Debian操作系统.</li>
+                            熟悉CentOS, Ubuntu, Debian操作系统, 了解系统参数调优. </li>
                         <li>
                             <progress value="70" max="100"></progress>
                             熟悉Ansible, Jenkins, Gitlab等自动化工具的使用.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
-                            熟悉ES的部署配置, logstash过滤规则的编写.
+                            熟悉ES的部署配置及维护, logstash日志过滤规则的编写.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            了解Prometheus, Grafana监控的配置以及使用.
+                            了解Prometheus监控查询, 结合grafana实现图形展示.
                         </li>
                         <li>
                             <progress value="60" max="100"></progress>
@@ -113,9 +113,9 @@
                     <article>
                         <h2>2021.03 - ?    广东邮电(电信子公司) - 云平台运维 </h2>
                         <p>
-                            1. 电信各省份资源池自研K8s故障处理. <br>
-                            2. 新资源池上线服务器的初始化操作, 各应用组件的安装部署. <br>
-                            3. 其它: ES集群维护; 组件安全基线整改; Ansible Playbook编写; 维护项目文档等.
+                            1. 电信各省份资源池自研K8s平台的搭建, 日常维护, 故障处理等. <br>
+                            2. 新资源池上线服务器的初始化操作, 电信自研应用组件的安装部署. <br>
+                            3. 其它: ES集群维护; 各组件安全基线整改; Ansible Playbook编写; 维护项目文档等.
                         </p>
                     </article>
                     <article>
@@ -148,20 +148,20 @@
                     <article>
                         <h2>Storm容器化部署 - 邮电</h2>
                         <p>
-                            &emsp;&emsp;小组接到需求对部分原生组件容器化, 使用helm批量部署并对接到自研K8s. 个人分配到的组件是Storm. 因官方chart仓库中已存在Storm包, 在此基础上做二次修改. <br>
+                            &emsp;&emsp;项目背景: 小组接到需求对部分原生组件容器化, 使用helm批量部署并对接到自研K8s. 个人分配到的组件是Storm. 因官方chart仓库中已存在Storm包, 在此基础上做二次修改. <br>
                             &emsp;&emsp;难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
                         </p>
                     </article>
                     <article>
                         <h2>ELK日志收集 - 邮电</h2>
                         <p>
-                            &emsp;&emsp;接内部业务需求: 部署ELK系统, 从日志进行检索关键信息. 业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做缓存. <br>
+                            &emsp;&emsp;项目背景: 因内部业务需求从日志进行检索关键信息. 需要在业务系统服务器上部署filebeat, 收集日志到logstash, 过滤后传输到es集群. 为防止logstash压力过大, filebeat到logstash的链路中引入Kafka做缓存. <br>
                             &emsp;&emsp;个人参与了该项目中全部流程, 负责编写部分日志的filebeat收集, logstash过滤规则. 为降低ES集群压力, 部分业务日志还需要提前聚合统计, 于logstash的aggregate编写Ruby做聚合计算. </p>
                     </article>
                     <article>
-                        <h2>业务自动化上报 - 卓望</h2>
+                        <h2>业务上报自动化 - 卓望</h2>
                         <p>
-                            &emsp;&emsp;因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
+                            &emsp;&emsp;项目背景: 因权益超市部分日期的业务监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
                             href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
                             target="_BLANK">代码链接</a><br>
 
