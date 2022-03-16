@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-03-13 13:24:17
+ * @LastEditTime: 2022-03-16 10:57:38
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -111,7 +111,7 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>2021.03 - ?    广东邮电(电信子公司) - 云平台运维 </h2>
+                        <h2>2021.03 - ?    广东邮电 - 云平台运维 </h2>
                         <p>
                             1. 电信各省份资源池自研K8s平台的搭建, 日常维护, 故障处理等. <br>
                             2. 新资源池上线服务器的初始化操作, 电信自研应用组件的安装部署. <br>
@@ -122,7 +122,7 @@
                         <h2>2018.12 - 2021.03    卓望数码(移动子公司) - 系统运维 </h2>
                         <p>
                             1. 保障权益平台(Docker)&权益超市(K8s)两套系统的稳定运行, 处理异常业务. <br>
-                            2. Dockerfile文件的编写, CI/CD流程修改, 业务上线部署等. <br>
+                            2. 业务Dockerfile文件的编写, CI/CD流程修改, 业务上线部署等. <br>
                             3. 其它: 编写脚本, 自动化常用的工作流程; 配合研发SQL执行; 监控系统, 业务日志存储维护; 日报编写等.<br>
                             4. 广东移动VMware vSphere平台及ESXI服务器维护.
                         </p>
@@ -155,8 +155,16 @@
                     <article>
                         <h2>ELK日志收集 - 邮电</h2>
                         <p>
-                            <strong style="color: #cf8a05;">项目背景:</strong> 因内部业务需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, 收集日志到Logstash, 过滤后传输到ES集群. 为防止Logstash压力过大, Filebeat到Logstash的链路中引入Kafka做缓存. <br>
-                            个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 为降低ES集群压力, 部分业务日志还需要提前聚合统计, 于Logstash的aggregate编写Ruby做聚合计算. </p>
+                            <strong style="color: #cf8a05;">项目背景:</strong> 因内部业务需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, 收集日志到Logstash, 过滤后传输到ES集群.  <br>
+                            个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 为降低ES集群压力, 部分业务日志还需要提前聚合统计, 于Logstash的aggregate模块编写Ruby做聚合计算. 最后Grafana从ES获取数据做图形展示. </p>
+                    </article>
+                    <article>
+                        <h2>电信CCSE(自研K8s)平台维护 - 邮电</h2>
+                        <p>
+                            <strong style="color: #cf8a05;">内容:</strong> 1. 部署, 维护K8s平台高可用集群, 保障集群ETCD, apiserver等组件的正常运行. <br>
+                            &emsp;&emsp;&nbsp; 2. 为用户提供技术支持, 排查Pod异常原因, 保障业务在平台的运行. <br>
+                            &emsp;&emsp;&nbsp; 3. 根据安全扫描报告, 协助研发对平台存在的漏洞(如SSL密码长度问题)进行修复.
+                        </p>
                     </article>
                     <article>
                         <h2>业务上报自动化 - 卓望</h2>
@@ -165,16 +173,17 @@
                             href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
                             target="_BLANK">代码链接</a><br>
 
-                            <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到; <br>&emsp;&emsp; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
+                            <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到; <br>
+                            &emsp;&emsp;&nbsp; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
-                    <article>
+                    <!-- <article>
                         <h2>广东网优项目 - 卓望</h2>
                         <p>
                             该项目使用到的技术栈有: K8s, Docker, Ceph等. <br>
                             在该项目中, 我参与了K8s集群的高可用部署; ETCD数据库的数据备份与恢复; 部署Ceph为后端存储等.
                         </p>
-                    </article>
+                    </article> -->
                     <!-- <article>
                         <h2>
                             权益平台&权益超市, 时间: 2019.12 - 2021.03
