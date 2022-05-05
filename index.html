@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2022-04-12 19:46:00
+ * @LastEditTime: 2022-05-05 16:44:17
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -71,25 +71,25 @@
                     <ul style="list-style: none">
                         <li>
                             <progress value="80" max="100"></progress>
-                            熟悉Docker容器, K8s容器编排技术, 了解容器网络.
+                            熟悉Docker容器, K8s容器编排技术, 了解容器网络构成.
                         </li>
                         <li><progress value="80" max="100"></progress>
-                            熟悉Python, 了解其Django框架(曾独立完成了一个demo bbs, <a href="https://github.com/erythrun/demo-warthunder-bbs">仓库链接</a>)</li>
+                            熟悉Python, 有一定的数据结构算法基础, 了解其Django框架(曾独立完成了一个demo bbs, <a href="https://github.com/erythrun/demo-warthunder-bbs">仓库链接</a>)</li>.
                         <li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉CentOS, Ubuntu, Debian操作系统, 了解系统参数调优.
+                            熟悉CentOS, Ubuntu, Debian系统, 了解系统参数调优以及shell的使用.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
-                            熟悉ES的部署配置及维护, Logstash模块过滤规则的编写.
+                            熟悉ES集群的部署及维护, Logstash日志过滤规则的编写.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Ansible, Gitlab, 了解Jenkins, Terraform的使用.
+                            devops工具: 熟悉Ansible, Gitlab, 了解Jenkins, Terraform.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Prometheus监控查询, 结合Grafana实现图形展示.
+                            熟悉使用Grafana做监控展示, 了解Prometheus的使用及查询.
                         </li>
                         <li>
                             <progress value="60" max="100"></progress>
@@ -97,7 +97,7 @@
                         </li>
                         <li>
                             <progress value="55" max="100"></progress>
-                            了解数据库原理, MySQL, Redis的配置, 维护, 备份等.
+                            了解数据库原理, 有MySQL, Redis的配置使用经验.
                         </li>
                         <li>&nbsp;</li>
                     </ul>
@@ -114,18 +114,17 @@
                     <article>
                         <h2>广东邮电 - 云平台运维 - 2021.03-今 </h2>
                         <p>
-                            1. 电信各省份资源池自研K8s平台的搭建, 日常维护, 故障处理等. <br>
-                            2. 新资源池上线服务器的初始化操作, 电信自研应用组件的安装部署. <br>
-                            3. 其它: ES集群维护; 各组件安全基线整改; Ansible Playbook编写; 维护项目文档等.
+                            1. 电信自研K8s平台的搭建, 日常维护, 故障处理等. <br>
+                            2. ES集群的搭建, 业务索引权限更改, 处理集群异常. <br>
+                            3. 其它: 新资源池上线服务器的初始化操作; 各组件安全基线整改; Ansible Playbook编写; 维护项目文档等.
                         </p>
                     </article>
                     <article>
                         <h2>卓望数码(移动子公司) - 系统运维 - 2018.12-2021.03 </h2>
                         <p>
-                            1. 保障权益平台(Docker)&权益超市(K8s)两套系统的稳定运行, 处理异常业务. <br>
+                            1. 保障权益超市系统的稳定运行, 处理异常业务. <br>
                             2. 业务Dockerfile文件的编写, CI/CD流程修改, 业务上线部署等. <br>
                             3. 其它: 编写脚本, 自动化常用的工作流程; 配合研发SQL执行; 监控系统, 业务日志存储维护; 日报编写等.<br>
-                            4. 广东移动VMware vSphere平台及ESXI服务器维护.
                         </p>
                     </article>
 
@@ -174,7 +173,7 @@
                             href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
                             target="_BLANK">代码链接</a><br>
 
-                            <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到; <br>
+                            <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
                             &emsp;&emsp;&nbsp; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
