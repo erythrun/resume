@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-02-07 20:15:26
+ * @LastEditTime: 2023-02-09 14:54:51
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -83,7 +83,7 @@
                             熟悉使用Grafana做监控展示, 了解Prometheus的原理及使用.
                         </li>
                         <li>
-                            <progress value="60" max="100"></progress>
+                            <progress value="65" max="100"></progress>
                             了解Nginx, Caddy, KeepAlived, Zookeeper, Kafka等中间件的部署, 配置及维护.
                         </li>
                         <li>
@@ -91,7 +91,7 @@
                             有一定的网络安全基础, 了解路由器, 交换机等网络设备.
                         </li>
                         <li>
-                            <progress value="55" max="100"></progress>
+                            <progress value="60" max="100"></progress>
                             了解数据库原理, 有MySQL, Redis的配置使用经验.
                         </li>
                         <li>&nbsp;</li>
@@ -144,7 +144,7 @@
                         <h2>Storm容器化部署 - 邮电</h2>
                         <p>
                             <strong style="color: #cf8a05;">项目背景: </strong>接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
-                            <strong style="color: #cf8a05;">难点: </strong>原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
+                            <strong style="color: #cf8a05;">难点: </strong>原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulSet使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
                         </p>
                     </article>
                     <article>
@@ -169,7 +169,7 @@
                             target="_BLANK">代码链接</a><br>
 
                             <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
-                            &emsp;&emsp;&nbsp; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
+                            &emsp;&emsp;&nbsp; 2. Grafana因安全需求, 需开启账号密码认证. 然后因为Grafana安全限制, Selenium无法模拟登录;  最终在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
                     <!-- <article>
