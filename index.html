@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-02-07 20:15:26
+ * @LastEditTime: 2023-02-14 20:34:14
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -143,20 +143,20 @@
                     <article>
                         <h2>Storm容器化部署 - 邮电</h2>
                         <p>
-                            <strong style="color: #cf8a05;">项目背景: </strong>接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
-                            <strong style="color: #cf8a05;">难点: </strong>原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
+                            项目背景: 接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
+                            难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulset使用SC进行持久化; 定制参数则在value文件中追加定义, 并修改相对应的模板, 完成任务.
                         </p>
                     </article>
                     <article>
                         <h2>ptc业务日志收集 - 邮电</h2>
                         <p>
-                            <strong style="color: #cf8a05;">项目背景:</strong> 因业务需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, 收集日志到Logstash, 过滤后传输到ES集群.  <br>
+                            项目背景: 因业务需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, 收集日志到Logstash, 过滤后传输到ES集群.  <br>
                             个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 为降低ES集群压力, 部分业务日志还需要使用Logstash的aggregate模块编写Ruby做聚合统计(如计算单位时间内的平均请求时间). 最后Grafana从ES获取数据做图形展示. <a href="https://raw.githubusercontent.com/erythrun/OpsScript/master/ELK%20%E6%97%A5%E5%BF%97%E8%A7%84%E5%88%99.txt">配置文件链接</a></p>
                     </article>
                     <article>
                         <h2>电信CCSE(自研K8s)平台维护 - 邮电</h2>
                         <p>
-                            <strong style="color: #cf8a05;">内容:</strong> 1. 部署, 维护K8s平台高可用集群, 保障集群ETCD, apiserver等组件的正常运行. <br>
+                            内容: 1. 部署, 维护K8s平台高可用集群, 保障集群ETCD, apiserver等组件的正常运行. <br>
                             &emsp;&emsp;&nbsp; 2. 为用户提供技术支持, 排查Pod异常原因, 保障业务在平台的运行. <br>
                             &emsp;&emsp;&nbsp; 3. 根据安全扫描报告, 协助研发对平台存在的漏洞(如SSL密码长度问题)进行修复.
                         </p>
@@ -164,11 +164,11 @@
                     <article>
                         <h2>业务上报自动化 - 卓望</h2>
                         <p>
-                            <strong style="color: #cf8a05;">项目背景: </strong>权益超市在特殊日期业务繁忙时监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
+                            项目背景: 权益超市在特殊日期业务繁忙时监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
                             href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
                             target="_BLANK">代码链接</a><br>
 
-                            <strong style="color: #cf8a05;">难点: </strong>1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
+                            难点: 1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
                             &emsp;&emsp;&nbsp; 2. Grafana因安全需求, 需开启账号密码认证. 脚本无法通过点击登录去获取数据;  最后在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
