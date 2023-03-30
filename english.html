@@ -17,6 +17,7 @@
 
             <div id="name">
                 <h1 class="quickFade delayTwo">Ewen Zheng</h1>
+                <h4 class="quickFade delayThree">&emsp;</h4>
                 <h4 class="quickFade delayThree">Job intention: Operations engineer</h4>
                 <h4 class="quickFade delayThree">Status: On the job</h4>
                 <h4 class="quickFade delayThree">Experience: 4 years</h4>
@@ -57,31 +58,31 @@
                             Proficient Centos, Ubuntu, Debian Linux distribution.
                         </li>
                         <li><progress value="75" max="100"></progress>
-                            Proficient in Python, learn about the Django framework.
+                            Proficient in Python, learned about the Django framework.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
-                            熟悉Logstash日志收集过滤规则编写, 了解ES集群搭建维护及异常处理.
+                            Proficient with filter rules of Logstash and maintain Elasticsearch cluster.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            devops工具: 熟悉Ansible, Gitlab, 了解Jenkins, Terraform.
+                            Skillful the automation tool such as Gitlab, Ansible.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉使用Grafana做监控展示, 了解Prometheus的原理及使用.
+                            Skillful show the status with Grafana, familiar with principle of Prometheus.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            了解Nginx, Caddy, KeepAlived, Zookeeper, Kafka等中间件的部署, 配置及维护.
+                            Skillful some components, such as Nginx, Caddy, KeepAlived.
                         </li>
                         <li>
                             <progress value="60" max="100"></progress>
-                            了解数据库原理, 有MySQL, Redis的配置使用经验.
+                            Familiar with Database principle and maintenance, like MySQL and Redis.
                         </li>
                         <li>
-                            <progress value="60" max="100"></progress>
-                            了解VMware VSphere平台的使用.
+                            <progress value="55" max="100"></progress>
+                            Familiar with VMware VSphere platform.
                         </li>
                         <li>&nbsp;</li>
                     </ul>
@@ -90,24 +91,24 @@
             </section>
             <section>
                 <div class="sectionTitle">
-                    <h1>工作</h1>
-                    <h1>经历</h1>
+                    <h1>Work</h1>
+                    <h1>EX</h1>
                 </div>
 
                 <div class="sectionContent">
                     <article>
-                        <h2>广东邮电 - 云平台运维 - 2021.03-今 </h2>
+                        <h2>Telcom Talents Company - Operations - 2021.03-now </h2>
                         <p>
-                            1. 电信自研K8s平台的搭建, 日常维护, 业务报障处理等. <br>
-                            2. ES集群的搭建, 业务权限配置, 集群异常处理.
+                            1. Solve Kubernetes cluster problems, deploy and maintain company platform in private cloud. <br>
+                            2. Maintain the ElasticSearch cluster.
                         </p>
                     </article>
                     <article>
-                        <h2>卓望数码(移动子公司) - 系统运维 - 2018.12-2021.03 </h2>
+                        <h2>Aspire Company - Operations - 2018.12-2021.03 </h2>
                         <p>
-                            1. 保障权益超市系统的稳定运行, 处理异常业务. <br>
-                            2. 业务Dockerfile文件的编写, CI/CD流程修改, 业务上线部署, 编写脚本等. <br>
-                            3. 协助维护广东移动VMware VSphere平台.<br>
+                            1. Maintain Right Market system(running in Docker). <br>
+                            2. Write the Dockerfile to build images. <br>
+                            3. The others: launch new service, write script, clean log.<br>
                         </p>
                     </article>
                 </div>
@@ -115,13 +116,14 @@
             </section>
             <section>
                 <div class="sectionTitle">
-                    <h1>项目</h1>
-                    <h1>经历</h1>
+                    <h1>Pro-</h1>
+                    <h1>ject</h1>
+                    <h1>EX</h1>
                 </div>
 
                 <div class="sectionContent">
                     <article>
-                        <h2>私有云容器平台搭建以及维护 - 邮电</h2>
+                        <h2>deploy and maintain container platform in private cloud </h2>
                         <p>
                             内容: 1. 在客户私有环境中搭建部署, 维护容器平台以及K8s集群, 保障平台以及K8s集群组件的运行. <br>
                             &emsp;&emsp;&nbsp; 2. 为用户提供上云支持, 排查K8s集群异常原因并解决问题, 保障业务在平台的运行. <br>
@@ -129,27 +131,26 @@
                         </p>
                     </article>
                     <article>
-                        <h2>Storm容器化部署 - 邮电</h2>
+                        <h2>Storm deployed by Helm</h2>
                         <p>
-                            项目背景: 接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
-                            难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulSet使用SC进行持久化; 定制参数则在对应的模板value文件中追加定义.
+                            I found the Storm package In Helm chart. But container platform deployed it will transfer some custom parameters such as SC, the package only use PVC to storage. So I took some time to learn the Helm template language, then modified template and value files to receive parameters when deployed.
                         </p>
                     </article>
                     <article>
-                        <h2>ptc业务日志收集 - 邮电</h2>
+                        <h2>Log collect</h2>
                         <p>
-                            项目背景: 因监控需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, Logstash, 过滤后传输到ES集群并展示监控.  <br>
-                            个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 部分业务监控数据需要在Logstash中编写Ruby脚本做聚合统计. 最后Grafana从ES获取数据做图形监控展示. <a style="color:#444;" href="https://raw.githubusercontent.com/erythrun/OpsScript/master/ELK%20%E6%97%A5%E5%BF%97%E8%A7%84%E5%88%99.txt">配置文件链接</a></p>
+                            Get a mission need retrieve key information from logs. I need to deploy Filebeat on the server, collect logs to Logstash, filter them and transfer them to the ES cluster. <br>
+
+                            In this project, I wrote the Filebeat and Logstash filter rules. In order to reduce the pressure of ES cluster, some data need caculated in Logstash. So I wrote the Ruby finish it in Aggregate module of Logstash.
+                            <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/elk-log-rules.txt">demo link</a></p>
                     </article>
                     <article>
-                        <h2>业务上报自动化 - 卓望</h2>
+                        <h2>Monitor auto report</h2>
                         <p>
-                            项目背景: 权益超市在特殊日期业务繁忙时监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
-                            style="color:#444;" href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
-                            target="_BLANK">代码链接</a><br>
+                            The service monitoring data needs to be reported every hour. The data in Grafana, so I wrote a Python script  that it can vist Grafana web page in Chrome browser by Selenium library, then catch text data and screenshot from Grafana, filter the key information by Xpath, send the data via email finally. <br>
+                            Difficulties: After Grafana enabled account and password authentication, the script could not login. In the end I found a way to solve it. use nginx as reverse proxy, configure header in Grafana, pass security authentication by insert header in Nginx. <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/grafana_monitor_report_by_selenium.py">demo link</a></p>
 
-                            难点: 1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
-                            &emsp;&emsp;&nbsp; 2. 因为Grafana安全限制, Selenium无法模拟登录;  最终在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
+
                         </p>
                     </article>
                 </div>
@@ -157,32 +158,31 @@
             </section>
             <section>
                 <div class="sectionTitle">
-                    <h1>证书</h1>
+                    <h1>CA</h1>
                 </div>
                 <div id="skill" class="sectionContent">
-                    <h4>CKA(<a style="color:#444;" href="https://www.cncf.io/certification/cka/">K8s管理员</a>)&emsp;&emsp;CET4</h4>
+                    <h4>CKA&emsp;&emsp;CET-4</h4>
                     <h4>&nbsp;</h4>
                 </div>
                 <div class="clear"></div>
             </section>
             <section>
-                <div class="sectionTitle">
-                    <h1>自我</h1>
+                <!-- <div class="sectionTitle">
+                    <h1>Self</h1>
+                    <h1>assess</h1>
+                </div> -->
+
+                <div class="sectionContent">
+                    <article>
+                        <h2> </h2>
                         <p>
-                            乐于尝试新事物, 遇到问题能通过Google或官方文档去学习, 解决;<br>
-                            不断提高自己的技术与工作能力. <br>
-                            如需查看网页版简历请访问 <a style="color:#444;" href="https://erythrun.github.io/resume/">https://erythrun.github.io/resume/</a>
+                            You can access my online resume by link <a style="color:#444;" href="https://erythrun.github.io/resume/english.html">https://erythrun.github.io/resume/english.html </a>, thank you~
                         </p>
                     </article>
                 </div>
                 <div class=" clear">
                 </div>
-            </section>       <h1>评价</h1>
-                </div>
-
-                <div class="sectionContent">
-                    <article>
-                        <h2> </h2>
+            </section>
 
 
             <!-- <section>
