@@ -147,7 +147,7 @@
                     <article>
                         <h2>Monitor auto report - Aspire</h2>
                         <p>
-                            The service monitoring data needs to be reported every hour. The data in Grafana, so I wrote a Python script that it can vist Grafana web page in Chrome browser by Selenium library, then catch screenshot, filter the key information from Grafana by Xpath, send the data via email finally. <br>
+                            The service monitoring data needs to be reported  manual every hour with Grafana. So I wrote a Python script that it can vist Grafana web page in Chrome browser by Selenium library, then catch screenshot, filter the key information from Grafana by Xpath, send the data via email finally. <br>
                             Difficulty: After Grafana enabled account and password authentication, the script could not login. In the end I found a way to solve it. use nginx as reverse proxy, configure header in Grafana, pass security authentication by insert header in Nginx. <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/grafana_monitor_report_by_selenium.py">demo link</a></p>
 
 
