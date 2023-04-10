@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-10 22:03:05
+ * @LastEditTime: 2023-04-10 22:06:59
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -151,8 +151,7 @@
                         <h2>业务CICD流程 - 邮电</h2>
                         <p>
                             背景: 内部业务易运营平台业务部署在K8s集群, 协助使用Jenkins配置流水线发布. <br>
-                            流水线内容: Jenkins抓取指定分支代码进行编译, 编译完成后通过Docker打包, 并推送到Harbor仓库中.  <br>
-                            最后通过kubectl命令上线业务的image. (通过RBAC仅授予kubectl对该业务命名空间的操作权限)
+                            流水线内容: Jenkins抓取指定分支代码进行编译, 编译完成后通过Docker打包, 推送到Harbor仓库. 最后通过kubectl命令上线业务的image. (通过RBAC仅授予该kubectl对业务命名空间的操作权限)
 
                         </p>
                     </article>
