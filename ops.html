@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-10 22:06:59
+ * @LastEditTime: 2023-04-10 22:23:48
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -143,7 +143,7 @@
                         <h2>服务器初始化 - 邮电</h2>
                         <p>
                             脚本背景: 客户提供的服务器多数处于网络离线状态, 且不符合开通实例要求, 需要登录手动配置Java, 挂盘等. <br>
-                            为方便执行, 没有使用paramiko库, 而是通过调用os的scp, sshpass进行复制, 登录, 执行脚本. <br>
+                            主程序通过python编写, 并兼容python2, 为方便执行没有使用主流的paramiko库, 而是通过调用OS的scp, sshpass进行复制, 登录, 执行脚本. <br>
                             功能可通过入参控制执行, 目前已实现的功能: 配置Java环境, 挂载数据盘, 新增用户, sudo权限, ssh公钥等. <a style="color:#444;" href="https://github.com/erythrun/ops-script/tree/master/init%20server">demo配置文件链接</a></p>
                         </p>
                     </article>
