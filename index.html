@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-23 11:01:27
+ * @LastEditTime: 2023-04-23 21:34:57
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -61,26 +61,26 @@
                     <ul style="list-style: none">
                         <li>
                             <progress value="80" max="100"></progress>
-                            熟悉K8s集群部署维护, 应用容器化部署以及问题排查.
+                            熟练掌握K8s集群部署维护, 应用容器化部署以及问题排查.
                         </li>
-                        <!-- <li>
+                        <li>
                             <progress value="75" max="100"></progress>
-                            熟悉CentOS, Ubuntu, Debian发行版, 了解系统参数调优.
-                        </li> -->
+                            熟练掌握CentOS, Ubuntu, Debian等Linux发行版的管理与维护.
+                        </li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉Python以及Shell, 有一定的代码编写经验, 了解Django框架.
+                            熟悉Python以及Shell, 有一定的代码编写经验.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
-                            熟悉Logstash日志收集过滤规则编写, 了解ES集群搭建维护及异常处理.
+                            熟悉Logstash日志收集过滤规则编写, 了解ES集群部署及维护.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            devops工具: 熟悉Ansible, Gitlab, 了解Jenkins, Terraform.
+                            熟悉Ansible, Gitlab, Jenkins, 了解Terraform等devops工具.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Nginx, KeepAlived, Zookeeper, 了解Ceph等组件的部署使用以及维护.
+                            熟悉Nginx, KeepAlived, Zookeeper, 了解Ceph等组件的部署及维护.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
@@ -92,12 +92,12 @@
                         </li> -->
                         <li>
                             <progress value="60" max="100"></progress>
-                            了解MySQL, Redis的原理及搭建维护, 有一定的SQL编写经验.
+                            了解MySQL, Redis等数据库原理及部署维护, 有一定的SQL编写经验.
                         </li>
-                        <!-- <li>
+                        <li>
                             <progress value="60" max="100"></progress>
-                            了解VMware VSphere平台的使用.
-                        </li> -->
+                            了解VMware VSphere, 电信天翼云等平台的使用.
+                        </li>
                         <li>&nbsp;</li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@
                         <p>
                             1. 搭建, 维护电信天翼云平台以及组件, 包括K8s容器平台, ELK日志平台以及Zookeeper, Kafka, 负载均衡等组件. <br>
                             2. 为用户解决平台或组件问题, 以及提供技术支持, 协助业务上云: 如应用容器化部署, 业务日志收集等.<br>
-                            3. 公司内部业务的运维支撑.
+                            3. 公司内部业务的运维支撑, 对外部用户演示平台等.
                         </p>
                     </article>
                     <article>
@@ -144,21 +144,30 @@
                 </div>
 
                 <div class="sectionContent">
-                    <!-- <article>
-                        <h2>私有云容器平台搭建以及维护 - 邮电</h2>
-                        <p>
-                            1. 在客户私有环境中搭建部署, 维护容器平台以及K8s集群组件的运行. <br>
-                            2. 为用户提供上云支持, 排查K8s集群异常原因并解决问题. <br>
-                            3. 根据安全扫描报告, 协助研发对平台存在的漏洞进行修复.
-                        </p>
-                    </article> -->
                     <article>
+                        <h2>云平台组件部署 - 邮电</h2>
+                        <p>
+                            项目背景: 某省公司业务需求, 要进行K8s、MySQL、Nginx等相关中间件的部署. <br>
+                            1. 在3台服务器上进行Paas层面的接口程序和相关中间件控制台的部署. <br>
+                            2. 根据业务需求, 使用若干台服务器进行K8s集群部署, 使用S3存储作为ETCD的定时备份及Harbor的数据存储. <br>
+                            3. 在K8S集群中使用2台服务器作为边缘节点部署Ingress-Nginx做服务转发.<br>
+                            4. 在剩余的4台服务器上安装2套Mysql数据库集群(一主一从), 交付业务使用.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>Jenkins流水线编写 - 邮电</h2>
+                        <p>
+                            项目背景: 内部业务-易运营服务部署在K8s集群, 协助使用Jenkins Pipline配置流水线发布. <br>
+                            流水线内容: Git克隆指定分支代码并扫描, 通过Docker进行多阶段bulid完成编译打包, 然后推送到Harbor仓库. 最后通过kubectl命令上线业务的image. (通过RBAC仅授予该kubectl对业务命名空间的操作权限)
+                        </p>
+                    </article>
+                    <!-- <article>
                         <h2>Storm容器化部署 - 邮电</h2>
                         <p>
                             项目背景: 接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
                             难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulSet使用SC进行持久化; 定制参数则在对应的模板value文件中追加定义.
                         </p>
-                    </article>
+                    </article> -->
                     <article>
                         <h2>ptc业务日志收集 - 邮电</h2>
                         <p>
@@ -166,7 +175,7 @@
                             个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 部分业务监控数据需要在Logstash中编写Ruby脚本做聚合统计. 最后Grafana从ES获取数据做图形监控展示. <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/elk-log-rules.txt">配置文件链接</a></p>
                     </article>
                     <article>
-                        <h2>业务上报自动化 - 卓望</h2>
+                        <h2>Python监控数据上报 - 卓望</h2>
                         <p>
                             项目背景: 权益超市在特殊日期业务繁忙时监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
                             style="color:#444;" href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
@@ -176,51 +185,6 @@
                             &emsp;&emsp;&nbsp; 2. 因为Grafana安全限制, Selenium无法模拟登录;  最终在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
                         </p>
                     </article>
-                    <!-- <article>
-                        <h2>广东网优项目 - 卓望</h2>
-                        <p>
-                            该项目使用到的技术栈有: K8s, Docker, Ceph等. <br>
-                            在该项目中, 我参与了K8s集群的高可用部署; ETCD数据库的数据备份与恢复; 部署Ceph为后端存储等.
-                        </p>
-                    </article> -->
-                    <!-- <article>
-                        <h2>
-                            权益平台&权益超市, 时间: 2019.12 - 2021.03
-                        </h2>
-                        <p>
-                            权益平台&权益超市为移动的权益投放平台和消费商城; <br>
-                            两者均为微服务架构: 权益平台为Docker搭建, 超市为K8S搭建;<br>
-                            主要技术栈: Java, Docker, K8S, MySQL, Grafana等. 个人工作内容如下:<br>
-                            1. 负责CI/CD流程, Dockerfile的模板编写, 以及两平台的版本部署等工作. <br>
-                            2. 维护权益平台操作系统以及容器应用, 保障服务稳定运行. <br>
-                            3. 一些自动化运维脚本编写以及维护, 比如<a
-                                href="https://gitee.com/erythron/ops-script/blob/master/grafana_monitor_report_by_selenium.py"
-                                target="_BLANK">自动日报输出</a>: 通过Python库Selenium操作Chrome浏览器获取渲染后的Grafana页面数据,
-                            再邮件输出监控内容.<br>
-                            4. 负责数据库的维护, 备份以及开发SQL审批执行等. <br>
-                            5. 其它工作: 配合开发核查日志解决异常业务订单; 系统,容器告警以及业务告警处理等.
-                        </p>
-                    </article>
-                    <article>
-                        <h2>广东网优项目, 时间: 2019.11, 已停止</h2>
-                        <p>
-                            该项目使用到的技术栈有: K8S, Docker, Ceph等. <br>
-                            在该项目中, 我参与了K8S集群的高可用部署; ETCD数据库的数据备份与恢复; 部署Ceph为后端存储等;
-                            项目外, 个人自行学习Docker, K8S相关原理, 了解其组件构成与运行. <br>
-                            Docker方面: 学习相关命令的使用, 了解镜像的构成原理, Dockerfile文件的编写等; <br>
-                            K8S方面: 了解其组件构成以及使用,如Pod, 控制器的部署; 服务发现; 持久卷的配置与使用;
-                            角色的权限控制; Helm, Ingress的部署与使用等 <br>
-                        </p>
-                    </article>
-                    <article>
-                        <h2>移动融合云项目, 时间:2018.12 - 2019.10</h2>
-                        <p>
-                            移动融合云由移动各机房ESXI物理服务器接入到VSphere虚拟化平台构成集群后管理使用,
-                            所使用到的技术栈有: VSphere, VRops等; 工作内容如下: <br>
-                            1. 参与数量1千以上的物理服务器集群的日常维护, 保障服务器集群的稳定运作.<br>
-                            2. 保障VSphere平台的稳定使用, 及时响应客户报障, 保证VPS的可用性.<br>
-                        </p>
-                    </article> -->
                 </div>
                 <div class="clear"></div>
             </section>
