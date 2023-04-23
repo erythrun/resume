@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-23 21:34:57
+ * @LastEditTime: 2023-04-23 22:13:07
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -65,10 +65,10 @@
                         </li>
                         <li>
                             <progress value="75" max="100"></progress>
-                            熟练掌握CentOS, Ubuntu, Debian等Linux发行版的管理与维护.
+                            熟练掌握CentOS、Ubuntu、Debian等Linux发行版的管理与维护.
                         </li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉Python以及Shell, 有一定的代码编写经验.
+                            熟悉Python及常用第三方库的使用, 有一定的代码编写经验.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
@@ -76,11 +76,11 @@
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Ansible, Gitlab, Jenkins, 了解Terraform等devops工具.
+                            熟悉Ansible、Gitlab、Jenkins, 了解Terraform等devops工具.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Nginx, KeepAlived, Zookeeper, 了解Ceph等组件的部署及维护.
+                            熟悉Nginx、KeepAlived、Zookeeper、Kafka, 了解Ceph等组件的部署及维护.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
@@ -92,10 +92,10 @@
                         </li> -->
                         <li>
                             <progress value="60" max="100"></progress>
-                            了解MySQL, Redis等数据库原理及部署维护, 有一定的SQL编写经验.
+                            了解MySQL, Redis数据库原理及基本维护使用, 熟悉编写SQL.
                         </li>
                         <li>
-                            <progress value="60" max="100"></progress>
+                            <progress value="55" max="100"></progress>
                             了解VMware VSphere, 电信天翼云等平台的使用.
                         </li>
                         <li>&nbsp;</li>
@@ -119,7 +119,7 @@
                         </p>
                     </article>
                     <article>
-                        <h2>卓望数码(移动子公司) - 系统运维 - 2018.12-2021.03 </h2>
+                        <h2>卓望数码 - 系统运维 - 2018.12-2021.03 </h2>
                         <p>
                             1. 保障权益超市系统的稳定运行, 处理异常业务. <br>
                             2. 业务Dockerfile文件的编写, CI/CD流程修改, 业务上线部署, 编写脚本等. <br>
@@ -177,12 +177,11 @@
                     <article>
                         <h2>Python监控数据上报 - 卓望</h2>
                         <p>
-                            项目背景: 权益超市在特殊日期业务繁忙时监控信息需每隔1小时就要上报一次, 信息从Grafana中获取再手动发送; 研究通过Python库Selenium操作Chrome浏览器Headless模式登录到Grafana, 截图并获取到网页代码, 通过xpath过滤出关键信息, 再邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
+                            背景: 权益超市在特殊时期每间隔1小时需手动上报Grafana监控数据.<br>
+                            脚本控制Chrome浏览器去访问Grafana页面(使用Python Selenium库), 截图并获取到网页代码, xpath过滤出关键信息, 最后邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
                             style="color:#444;" href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
-                            target="_BLANK">代码链接</a><br>
-
-                            难点: 1. 脚本一开始是直接使用requests库去链接网页, 后发现数据需无头浏览器执行JS后才能获取到. <br>
-                            &emsp;&emsp;&nbsp; 2. 因为Grafana安全限制, Selenium无法模拟登录;  最终在Grafana中配置header, 部署Nginx做反向代理插入header, 通过安全认证, 获取到数据.
+                            target="_BLANK">demo代码链接</a><br>
+                            难点: 因为Grafana安全限制, Selenium无法通过填充密码登录; 通过在Grafana中配置header认证, 部署Nginx作为反向代理并设置header认证, 通过安全限制.
                         </p>
                     </article>
                 </div>
