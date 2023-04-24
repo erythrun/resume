@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-23 22:13:07
+ * @LastEditTime: 2023-04-24 15:51:11
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -148,10 +148,9 @@
                         <h2>云平台组件部署 - 邮电</h2>
                         <p>
                             项目背景: 某省公司业务需求, 要进行K8s、MySQL、Nginx等相关中间件的部署. <br>
-                            1. 在3台服务器上进行Paas层面的接口程序和相关中间件控制台的部署. <br>
+                            1. PaaS层面的接口程序和相关中间件控制台, Mysql数据库部署. <br>
                             2. 根据业务需求, 使用若干台服务器进行K8s集群部署, 使用S3存储作为ETCD的定时备份及Harbor的数据存储. <br>
-                            3. 在K8S集群中使用2台服务器作为边缘节点部署Ingress-Nginx做服务转发.<br>
-                            4. 在剩余的4台服务器上安装2套Mysql数据库集群(一主一从), 交付业务使用.
+                            3. 在K8S集群中使用2台服务器打上标签作为边缘节点部署Ingress-Nginx, 实现服务转发功能.
                         </p>
                     </article>
                     <article>
