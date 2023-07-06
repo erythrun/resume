@@ -99,8 +99,8 @@
                     <article>
                         <h2>Telcom Talents Company - Operations - 2021.03-now </h2>
                         <p>
-                            1. Solve Kubernetes cluster problems, deploy and maintain company platform in private cloud. <br>
-                            2. Maintain the ElasticSearch cluster.
+                            1. Build and maintain Telecom Tianyi cloud platform and components, including K8s container platform, ELK log platform, Zookeeper, Kafka, load balancing and other components. <br>
+                            2. Solve platform or component problems for users, and provide technical support to assist business cloud: such as application container deployment, business log collection, etc.<br>
                         </p>
                     </article>
                     <article>
@@ -122,17 +122,10 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>deploy, maintain container platform - Telcom Talents </h2>
+                        <h2>Jenkins Pipeline - Telcom Talents </h2>
                         <p>
-                            1. Deploy, maintain the container platform and Kubernetes cluster in the client's private cloud, make sure they are stable running. <br>
-                            2. Provide Technical support for client, troubleshoot issues in Kubernetes cluster and platform. <br>
-                            3. Accord security scan report, assist developer to fix the security issues in the platform.
-                        </p>
-                    </article>
-                    <article>
-                        <h2>Storm deployed by Helm - Telcom Talents</h2>
-                        <p>
-                            The Storm package already exists in Helm chart. But container platform deployed it will transfer some custom parameters such as SC, the package only use PVC to storage. So I took some time to learn the Helm template language, then modified template and value files to use parameters when deployed.
+                            Project background: Easy Operation Project is deployed in K8s cluster, now use Jenkins Pipeline to realize CI/CD function <br>
+                            Pipeline content: Git clones the specified branch code and scans it, completes the compilation and packaging through multi-stage bulid through Docker, and then pushes it to the Harbor. Finally, the image of the online service is launched through the kubectl command. (Only grant the kubectl the operation authority for the business namespace through RBAC).
                         </p>
                     </article>
                     <article>
@@ -148,10 +141,14 @@
                         <p>
                             The service monitoring data needs to be reported manual every hour with Grafana. So I wrote a Python script that it can access Grafana web page in Chrome browser by Selenium library, then catch screenshot, filter the key information from Grafana by Xpath, send the data via email finally. <br>
                             Difficulty: After Grafana enabled security authentication, the script could not login by password. In the end I found a way to solve it, use nginx as reverse proxy, configure header in Grafana, pass security authentication by insert header in Nginx. <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/grafana_monitor_report_by_selenium.py">demo config link</a></p>
-
-
                         </p>
                     </article>
+                    <!-- <article>
+                        <h2>Storm deployed by Helm - Telcom Talents</h2>
+                        <p>
+                            The Storm package already exists in Helm chart. But container platform deployed it will transfer some custom parameters such as SC, the package only use PVC to storage. So I took some time to learn the Helm template language, then modified template and value files to use parameters when deployed.
+                        </p>
+                    </article> -->
                 </div>
                 <div class="clear"></div>
             </section>
