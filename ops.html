@@ -2,7 +2,7 @@
  * @Author: Athrun.Zala
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2023-04-28 11:27:07
+ * @LastEditTime: 2023-07-17 11:18:19
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -109,7 +109,7 @@
                     <article>
                         <h2>广东邮电 - 云平台运维 - 2021.03-今 </h2>
                         <p>
-                            1. 搭建, 维护电信天翼云平台以及组件, 包括K8s容器平台, ELK日志平台以及Zookeeper, Kafka, 负载均衡等组件. <br>
+                            1. 搭建, 维护电信天翼云平台以及组件, 包括K8s容器平台, ELK日志平台, 负载均衡等组件. <br>
                             2. 为用户解决平台或组件问题, 以及提供技术支持, 协助业务上云: 如应用容器化部署, 业务日志收集等.<br>
                             3. 公司内部业务的运维支撑, 对外部用户演示平台等.
                         </p>
@@ -133,6 +133,14 @@
 
                 <div class="sectionContent">
                     <article>
+                        <h2>Ansible ELK部署 - 邮电</h2>
+                        <p>
+                            需求: 通过Ansible playbook实现ELK的批量安装. 个人将需求拆分为俩部分, 如下: <br>
+                            ES部分: 基于官方ES Ansible项目改造为离线模式, 项目配置多个模板, 通过Python主程序控制入参, 实现了ES单节点或集群安装, 初始化集群密码等功能.<br>
+                            余下部分: ES部署完成后, Python主程序将根据入参, 进行Logstash, Kibana的安装.
+                        </p>
+                    </article>
+                    <!-- <article>
                         <h2>云平台组件部署 - 邮电</h2>
                         <p>
                             项目背景: 总部业务需求, 研讨决定在天翼云平台按省份各部署1套系统, 系统包含了K8s、MySQL、Nginx、缓存等相关中间件. <br>
@@ -140,15 +148,7 @@
                             2. 根据业务需求, 使用若干台服务器进行K8s集群部署, 使用S3存储作为ETCD的定时备份及Harbor的数据存储. <br>
                             3. 在K8S集群中使用2台服务器打上标签作为边缘节点部署Ingress-Nginx, 实现服务转发功能.
                         </p>
-                    </article>
-                    <article>
-                        <h2>Shell初始化服务器 - 邮电</h2>
-                        <p>
-                            脚本背景: 客户提供的服务器多数处于网络离线状态, 且不符合开通实例要求, 需要登录手动配置Java, 挂盘, 创建用户等, 步骤操作繁琐且容易出错遗漏. <br>
-                            主程序通过Python编写(兼容Python2/3), 为方便离线环境执行, 没有使用主流的Paramiko库, 而是通过调用OS的scp, sshpass进行复制, 登录, 执行Shell脚本. <br>
-                            功能可通过参数控制执行, 目前已实现的功能: 配置Java环境, 挂载数据盘, 新增用户, sudo权限, ssh公钥等. <a style="color:#444;" href="https://github.com/erythrun/ops-script/tree/master/init%20server">demo配置文件链接</a></p>
-                        </p>
-                    </article>
+                    </article> -->
                     <article>
                         <h2>Jenkins流水线编写 - 邮电</h2>
                         <p>
@@ -156,6 +156,15 @@
                             流水线内容:Git克隆指定分支代码并扫描, 通过Docker进行多阶段bulid完成编译打包, 然后推送到Harbor仓库. 最后通过kubectl命令上线业务的image. (通过RBAC仅授予该kubectl对业务命名空间的操作权限)
                         </p>
                     </article>
+                    <article>
+                        <h2>Shell初始化服务器 - 邮电</h2>
+                        <p>
+                            脚本背景: 客户提供的服务器多数处于网络离线状态, 部署实例要求需要手工配置, 步骤操作繁琐且容易出错遗漏. <br>
+                            主程序通过Python编写(兼容Python2/3), 为方便离线环境执行, 没有使用主流的Paramiko库, 而是通过调用OS的scp, sshpass进行复制, 登录, 执行Shell脚本. <br>
+                            功能可通过参数控制执行, 目前已实现的功能: 配置Java环境, 挂载数据盘, 新增用户, sudo权限, ssh公钥等. <a style="color:#444;" href="https://github.com/erythrun/ops-script/tree/master/init%20server">demo配置文件链接</a></p>
+                        </p>
+                    </article>
+
                     <article>
                         <h2>Python监控数据上报 - 卓望</h2>
                         <p>
