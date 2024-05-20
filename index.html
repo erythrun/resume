@@ -2,7 +2,7 @@
  * @Author: Athrun
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2024-04-22 17:44:01
+ * @LastEditTime: 2024-05-20 20:08:18
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
                             熟练掌握CentOS、Ubuntu、Debian等Linux发行版的管理与维护.
                         </li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉Python及常用第三方库的使用, 有一定的代码编写经验.
+                            熟悉Python及常用第三方库的使用, 了解Django框架, 有一定的代码编写经验.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
@@ -114,7 +114,7 @@
                         <h2>广东邮电 - 云平台运维 - 2021.03-今 </h2>
                         <p>
                             1. 搭建, 维护电信天翼云平台以及组件, 包括K8s容器平台, ELK日志平台以及负载均衡等组件. <br>
-                            2. 负责客户私有云平台部署维护, 定位并处理客户环境故障事件, 协助业务上云: 应用容器化部署, 业务日志收集等.<br>
+                            2. 负责客户私有云平台部署维护, 定位并处理客户环境故障事件, 协助业务上云, 应用容器化部署, 业务日志收集等.<br>
                             3. 公司内部业务的运维支撑, 流水线的定制开发, 编写自动化脚本等.
                         </p>
                     </article>
@@ -148,7 +148,7 @@
                         <h2>Storm容器化部署 - 邮电</h2>
                         <p>
                             项目背景: 接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
-                            难点: 原有包的持久化存储仅使用了PVC进行持久化存储; 自研K8s部署时需传递定制参数, 仅修改value配置不能符合要求. 花费了一定时间学习了Helm的编写, 直接修改包中的statefulSet使用SC进行持久化; 定制参数则在对应的模板value文件中追加定义.
+                            难点: 原有包的配置不符合使用, 自研K8s部署时需传递定制参数, 仅修改value配置不符合要求. 花费了一定时间学习了Helm的编写去直接修改模板, 定制参数则在value文件中追加定义.
                         </p>
                     </article>
                     <!-- <article>
@@ -161,12 +161,21 @@
                         </p>
                     </article> -->
                     <article>
+                        <h2>外部直通容器Pod网络 - 邮电</h2>
+                        <p>
+                            背景: 位于容器集群外部的服务需要直通容器集群的Pod IP. <br>
+                            在搜索了相关文档后, 确定通过Docker运行calico-node镜像方案进行; <br>
+                            参考Calico官方文档, 配置上填写K8s集群链接信息, 容器授予宿主机网络的操作权限. <br>
+                            经过多次测试, 成功运行calico-node容器, 并在宿主机防火墙上观察生成Pod网段相关的规则, 打通Pod网络
+                        </p>
+                    </article>
+                    <!-- <article>
                         <h2>Jenkins流水线编写 - 邮电</h2>
                         <p>
                             项目背景: 内部业务-易运营服务部署在K8s集群, 协助使用Jenkins Pipline配置流水线发布. <br>
                             流水线内容: Git克隆指定分支代码并扫描, 通过Docker进行多阶段bulid完成编译打包, 然后推送到Harbor仓库. 最后通过kubectl命令上线业务的image. (通过RBAC仅授予该kubectl对业务命名空间的操作权限)
                         </p>
-                    </article>
+                    </article> -->
                     <article>
                         <h2>ptc业务日志收集 - 邮电</h2>
                         <p>
