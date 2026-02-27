@@ -2,7 +2,7 @@
  * @Author: Athrun
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2024-05-20 21:27:21
+ * @LastEditTime: 2026-02-27 17:42:17
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
                 <h1 class="quickFade delayTwo">郑卓文</h1>
                 <h4 class="quickFade delayThree">求职意向:容器, 系统运维</h4>
                 <h4 class="quickFade delayThree">状态: 在职</h4>
-                <h4 class="quickFade delayThree">工作经验: 5年</h4>
+                <h4 class="quickFade delayThree">工作经验: 6年</h4>
                 <h4 class="quickFade delayThree">到岗时间: 一个月内</h4>
             </div>
 
@@ -42,9 +42,9 @@
                 <ul>
                     <li>学校: 广州大学华软软件学院</li>
                     <li>学历: 全日制本科(2019届)</li>
-                    <li>专业: 网络安全</li>
+                    <li>专业: 网络工程</li>
                     <li>邮箱: erythron@outlook.com</li>
-                    <li>手机: 17199922057</li>
+                    <li>手机: 18148907232</li>
                     <li>微信: 1773990085</li>
                 </ul>
             </div>
@@ -76,16 +76,16 @@
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Ansible、Gitlab、Jenkins, 了解Terraform等devops工具.
+                            熟悉Nginx, KeepAlived, Zookeeper, Caddy等中间件的部署及维护.
                         </li>
                         <li>
                             <progress value="65" max="100"></progress>
-                            熟悉Nginx、KeepAlived、Zookeeper、Caddy, 了解Ceph等组件的部署及维护.
+                            熟悉Ansible, Gitlab, Jenkins等devops工具的使用.
                         </li>
-                        <li>
+                        <!-- <li>
                             <progress value="65" max="100"></progress>
                             熟悉使用Grafana做监控展示, 了解Prometheus的原理及使用.
-                        </li>
+                        </li> -->
                         <!-- <li>
                             <progress value="60" max="100"></progress>
                             有一定的网络安全基础, 了解路由器, 交换机等网络设备.
@@ -111,19 +111,20 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>广东邮电 - 云平台运维 - 2021.03-今 </h2>
+                        <h3>电信天翼云(项目外包) &nbsp;&nbsp; 云平台运维 &nbsp;&nbsp; 2021.03 - 今 </h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp; 注: 因供应商调整, 合同主体由广东邮电人才转为胜通和
                         <p>
-                            1. 搭建, 维护电信天翼云平台以及组件, 包括K8s容器平台, ELK日志平台以及负载均衡等组件. <br>
-                            2. 负责客户私有云平台部署维护, 定位并处理客户环境故障事件, 协助业务上云, 应用容器化部署, 业务日志收集等.<br>
+                            1. 部署, 维护电信私有云PaaS平台及容器, 日志, 消息等组件控制台. <br>
+                            2. 在私有云环境定位并处理客户环境故障事件, 协助业务上云, 应用容器化部署等.<br>
                             3. 公司内部业务的运维支撑, 流水线的定制开发, 编写自动化脚本等.
                         </p>
                     </article>
                     <article>
-                        <h2>卓望数码 - 系统运维 - 2018.12-2021.03 </h2>
+                        <h3>卓望数码 &nbsp;&nbsp; 系统运维 &nbsp;&nbsp; 2018.12 - 2021.03 </h3>
                         <p>
-                            1. 保障权益超市系统的稳定运行, 处理异常业务. <br>
+                            1. 保障广东移动-权益超市系统的稳定运行, 处理异常业务. <br>
                             2. 业务Dockerfile文件的编写, CI/CD流程修改, 业务上线部署, 编写脚本等. <br>
-                            3. 协助维护广东移动VMware VSphere平台.<br>
+                            3. 协助维护广东移动内部VMware VSphere平台.<br>
                         </p>
                     </article>
 
@@ -145,53 +146,40 @@
 
                 <div class="sectionContent">
                     <article>
-                        <h2>Storm容器化部署 - 邮电</h2>
+                        <h3>云原生平台资源自动化部署工具(Python)</h3>
+                        <p>
+                            成果: 帮助团队将项目部署准备工时从4小时降到30分钟, 并避免人工操作导致的配置错误. <br>
+                            1. 通过IaaS API自动创建项目所需基础资源(安全组,ECS,负载均衡,DNS,VIP绑定等), 实现全链路自动化.<br>
+                            2. 设计资源依赖顺序与校验机制, 保证资源创建按正确拓扑顺序执行.<br>
+                            3. 自动收集资源ID/IP信息, 通过模板渲染方式生成配置文件, 实现从资源到配置的闭环, 提升部署稳定性.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>PTC业务日志采集与监控体系建设(ELK)</h3>
+                        <p>
+                            成果: 统一服务日志格式,提升服务的的日志查询效率. <br>
+                            1. 编写多套Filebeat过滤规则, 解决原始日志格式不统一, 字段缺失等问题.<br>
+                            2. 在Logstash使用Ruby实现日志聚合与字段计算, 用于关键指标(耗时 / 请求量)的自动统计.<br>
+                            3. 协助构建日志 → ES → Grafana的监控链路, 使业务日志监控从人工查询转向可视化面板.<br>
+                            <!-- <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/elk-log-rules.txt">github链接</a> -->
+                        </p>
+                    </article>
+                    <article>
+                        <h3>权益超市监控数据自动化上报(Python+ Selenium)</h3>
+                        <p>
+                            成果：替代人工每小时上报流程, 将重复工作自动上传.<br>
+                            1. 使用Selenium定制XPath解析逻辑, 自动从Grafana中提取关键监控指标并生成图表/文本.<br>
+                            2. 设计自动邮件推送模块, 实现自动化生成监控日报, 大幅减少人工巡检时间.<br>
+                            3. 因Grafana登录安全限制, 设计Nginx反向代理+Header认证方案通过Grafana认证, 使自动化任务稳定运行.
+                        </p>
+                    </article>
+                    <!-- <article>
+                        <h3>Storm容器化部署</h3>
                         <p>
                             项目背景: 接到需求对组件Storm容器化, 使用Helm批量部署并对接到自研K8s. Helm chart仓库中已存在Storm包, 在此基础上做二次修改. <br><br>
                             难点: 原有包的配置不符合使用, 自研K8s部署时需传递定制参数, 仅修改value配置不符合要求. 花费了一定时间学习了Helm的编写去直接修改模板, 定制参数则在value文件中追加定义.
                         </p>
-                    </article>
-                    <!-- <article>
-                        <h2>云平台组件部署 - 邮电</h2>
-                        <p>
-                            项目背景: 总部业务需求, 研讨决定在天翼云平台按省份各部署1套系统, 系统包含了K8s、MySQL、Nginx、缓存等相关中间件. <br>
-                            1. 部署PaaS层面的接口程序和相关中间件控制台、Mysql数据库、缓存等组件. <br>
-                            2. 根据业务需求, 使用若干台服务器进行K8s集群部署, 使用S3存储作为ETCD的定时备份及Harbor的数据存储. <br>
-                            3. 在K8S集群中使用2台服务器打上标签作为边缘节点部署Ingress-Nginx, 实现服务转发功能.
-                        </p>
                     </article> -->
-                    <article>
-                        <h2>外部直通容器Pod网络 - 邮电</h2>
-                        <p>
-                            背景: 位于容器集群外部的服务需要直通容器集群的Pod IP. <br>
-                            在搜索了相关文档后, 确定通过Docker运行calico-node容器方案进行; <br>
-                            参考Calico官方文档, 容器配置上K8s集群链接信息, 授予宿主机网络的操作权限. <br>
-                            经过多次测试排查, 成功运行并在宿主机防火墙上观察生成Pod网段规则, 打通Pod网络.
-                        </p>
-                    </article>
-                    <!-- <article>
-                        <h2>Jenkins流水线编写 - 邮电</h2>
-                        <p>
-                            项目背景: 内部业务-易运营服务部署在K8s集群, 协助使用Jenkins Pipline配置流水线发布. <br>
-                            流水线内容: Git克隆指定分支代码并扫描, 通过Docker进行多阶段bulid完成编译打包, 然后推送到Harbor仓库. 最后通过kubectl命令上线业务的image. (通过RBAC仅授予该kubectl对业务命名空间的操作权限)
-                        </p>
-                    </article> -->
-                    <article>
-                        <h2>ptc业务日志收集 - 邮电</h2>
-                        <p>
-                            项目背景: 因监控需求从日志进行检索关键信息. 需要在服务器上部署Filebeat, Logstash, 过滤后传输到ES集群并展示监控.  <br>
-                            个人参与了该项目中全部流程, 负责编写部分日志的Filebeat收集, Logstash过滤规则. 部分业务监控数据需要在Logstash中编写Ruby脚本做聚合统计. 最后Grafana从ES获取数据做图形监控展示. <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/elk-log-rules.txt">配置文件链接</a></p>
-                    </article>
-                    <article>
-                        <h2>Python监控数据上报 - 卓望</h2>
-                        <p>
-                            背景: 权益超市在特殊时期每间隔1小时需手动上报Grafana监控数据.<br>
-                            脚本控制Chrome浏览器去访问Grafana页面(使用Python Selenium库), 截图并获取到网页代码, xpath过滤出关键信息, 最后邮件输出监控内容. 脚本后续还改造为自动日报输出. <a
-                            style="color:#444;" href="https://raw.githubusercontent.com/erythrun/OpsScript/master/grafana_monitor_report_by_selenium.py"
-                            target="_BLANK">demo代码链接</a><br>
-                            难点: 因为Grafana安全限制, Selenium无法通过填充密码登录; 通过在Grafana中配置header认证, 部署Nginx作为反向代理并设置header认证, 通过安全限制.
-                        </p>
-                    </article>
                 </div>
                 <div class="clear"></div>
             </section>
@@ -215,8 +203,8 @@
                     <article>
                         <h2> </h2>
                         <p>
-                            拥有较强的学习能力, 遇到问题能通过Google或官方文档去学习, 解决;  <br>
-                            乐于尝试新事物, 业余时间曾折腾过VPS, 硬路由, openwrt等. <br>
+                            拥有较强的学习能力, 遇到问题能通过Google或文档去解决;  <br>
+                            乐于尝试新事物, 业余时间曾折腾过海外VPS, openwrt系统等. <br>
                             感谢查阅简历, 如需查看网页版请访问 <a style="color:#444;" href="https://erythrun.github.io/resume/">https://erythrun.github.io/resume/</a>
                         </p>
                     </article>
