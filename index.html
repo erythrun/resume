@@ -2,7 +2,7 @@
  * @Author: Athrun
  * @Email: erythron@outlook.com
  * @Date: 2019-10-15 20:23:56
- * @LastEditTime: 2026-03-03 16:21:51
+ * @LastEditTime: 2026-03-09 17:56:12
  * @description: 说明
  -->
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
                             熟练掌握CentOS、Ubuntu、Debian等Linux发行版的管理与维护.
                         </li>
                         <li><progress value="75" max="100"></progress>
-                            熟悉Python及常用第三方库的使用, 了解Django框架, 有一定的代码编写经验.
+                            熟悉Python及常用第三方库的使用, 有一定的代码编写经验.
                         </li>
                         <li>
                             <progress value="70" max="100"></progress>
@@ -149,9 +149,19 @@
                         <h3>云平台资源自动化部署工具(Python)</h3>
                         <p>
                             成果: 帮助团队将项目部署准备工时从4小时降到30分钟, 并避免人工操作导致的配置错误. <br>
-                            1. 通过IaaS API自动创建项目所需基础资源(安全组,ECS,负载均衡,DNS,VIP绑定等), 实现全链路自动化.<br>
-                            2. 设计资源依赖顺序与校验机制, 保证资源创建按正确拓扑顺序执行.<br>
-                            3. 自动收集资源ID/IP信息, 通过模板渲染方式生成配置文件, 实现从资源到配置的闭环, 提升部署稳定性.
+                            1. 通过IaaS API自动创建项目所需基础资源(安全组,ECS,负载均衡,DNS,VIP绑定等), 实现自动化创建.<br>
+                            2. 设计资源依赖顺序, 保证资源创建按正确拓扑顺序执行.<br>
+                            3. 自动收集资源ID/IP信息, 通过模板渲染方式生成配置文件, 避免人工介入, 提升部署稳定性.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>容器集群服务迁移</h3>
+                        <p>
+                            成果: PaaS平台50+业务从天翼私有云迁移到华为私有云环境<br>
+                            1. 通过MySQL主从复制实现跨环境数据迁移. <br>
+                            2. 通过Harbor Registry Replication同步100+业务镜像. <br>
+                            3. 批量导出旧集群Deployment/Service/ConfigMap等资源yaml文件, 根据新环境修改配置, 再在新平台发布. <br>
+                            4. 修改负载均衡配置, 完成域名解析切换与流量迁移. <br>
                         </p>
                     </article>
                     <article>
@@ -159,12 +169,12 @@
                         <p>
                             成果: 统一服务日志格式,提升服务的的日志查询效率. <br>
                             1. 编写多套Filebeat过滤规则, 解决原始日志格式不统一, 字段缺失等问题.<br>
-                            2. 在Logstash使用Ruby实现日志聚合与字段计算, 用于关键指标(耗时 / 请求量)的自动统计.<br>
-                            3. 协助构建日志 → ES → Grafana的监控链路, 使业务日志监控从人工查询转向可视化面板.<br>
+                            2. 在Logstash使用Ruby实现字段计算, 用于关键指标(耗时/请求量)的自动统计.<br>
+                            3. 协助构建日志→ES→Grafana的监控链路, 使业务日志监控从人工查询转向可视化面板.<br>
                             <!-- <a style="color:#444;" href="https://github.com/erythrun/ops-script/blob/master/elk-log-rules.txt">github链接</a> -->
                         </p>
                     </article>
-                    <article>
+                    <!-- <article>
                         <h3>权益超市监控数据自动化上报(Python+Selenium)</h3>
                         <p>
                             成果：替代人工每小时上报流程, 将重复工作自动上传.<br>
@@ -172,7 +182,7 @@
                             2. 设计自动邮件推送模块, 实现自动化生成监控日报, 大幅减少人工巡检时间.<br>
                             3. 因Grafana登录安全限制, 设计Nginx反向代理+Header认证方案通过Grafana认证, 使自动化任务稳定运行.
                         </p>
-                    </article>
+                    </article> -->
                     <!-- <article>
                         <h3>Storm容器化部署</h3>
                         <p>
